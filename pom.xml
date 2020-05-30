@@ -19,13 +19,33 @@
   </properties>
 
   <dependencies>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+
+<dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.4.15.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.20</version>
+    </dependency>
+
+ 
+   <dependency>
+     <groupId>com.yahoo.vespa</groupId>
+     <artifactId>config-provisioning</artifactId>
+     <version>7.227.16</version>
+   </dependency>
+ </dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
