@@ -17,6 +17,7 @@ import ar.com.ada.creditos.*;
 import ar.com.ada.creditos.entities.Cliente;
 import ar.com.ada.creditos.entities.Prestamo;
 import ar.com.ada.creditos.excepciones.*;
+import ar.com.ada.creditos.managers.CancelacionManager;
 import ar.com.ada.creditos.managers.ClienteManager;
 import ar.com.ada.creditos.managers.PrestamoManager;
 import ar.com.ada.creditos.*;
@@ -29,12 +30,15 @@ public class ABM {
 
     protected PrestamoManager ABMPrestamo = new PrestamoManager();// creamos cada manager
 
+    protected CancelacionManager ABMCancelacion = new CancelacionManager();
+
     public void iniciar() throws Exception {
 
         try {
 
             ABMCliente.setup();// conecta al manager a la base de datos a traves del metodo set up
             ABMPrestamo.setup();// idem
+            ABMCancelacion.setup();
 
             printOpciones();
 
